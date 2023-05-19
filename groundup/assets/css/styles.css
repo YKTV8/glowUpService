@@ -2,8 +2,18 @@
     box-sizing: border-box;
     margin: 0;
 }
+header{
+    /* background-color: rgba(54, 54, 54, 0.95); */
+    /* width: 100%; */
+}
 body{
-    background-color: rgb(54, 54, 54);
+    overflow-x: hidden;
+    /* background-color: rgb(54, 54, 54); */
+    background-image: url(/images/glowmenuBG.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 80%;
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,10 +21,10 @@ body{
     justify-content: center;
     height: 100%;
 }
-
-nav{
+#nav{
+    background-color: rgba(54, 54, 54, 0.95);
     padding: 5%;
-    width: 80px;
+    width: 100vw;
     display: flex;
     text-align: center;
     align-items: center;
@@ -51,7 +61,7 @@ nav.active ul li{
 }
 nav ul a{
     position: relative;
-    color: black;
+    color: white;
     text-decoration: none;
     margin: 0 10px;
 }
@@ -90,7 +100,7 @@ nav.active .icon .line2{
     background-position: center;
     background-size: 75%;
     background-repeat:no-repeat;
-    background-image: url(/images/logo.jpg);
+    /* background-image: url(/images/logo.jpg); */
     height: 400px;
     width: 600px;
     margin-bottom: 5%;
@@ -103,6 +113,7 @@ nav.active .icon .line2{
 }
 /* styles for hours of operation details */
 .hours{
+    background-color: rgba(255, 255, 255, 0.8);
     margin: 100px 500px;
     padding: 2%;
     justify-content: center;
@@ -114,6 +125,7 @@ nav.active .icon .line2{
 }
 
 .notes{
+    background-color: rgba(255, 255, 255, 0.8);
     margin: 50px 500px;
     padding: 2%;
     justify-content: center;
@@ -124,8 +136,17 @@ nav.active .icon .line2{
     border-radius: 15px;
 }
 .mission{
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
-    padding:  2% 25%;
+    padding:  5% 25%;
+    margin-bottom: 2%;
+}
+.panel.active{
+    background-color: rgba(54, 54, 54, 0.80);
+}
+.panel.active h2{
+    font-size: 5rem;
+    background-color: rgba(54, 54, 54, 0.80);
 }
 .interactiveMenu{
     text-align: center;
@@ -142,6 +163,8 @@ nav.active .icon .line2{
     background-image: url(/images/food.jpg);
     padding: 15%;
     margin-bottom: 5%;
+    -webkit-box-shadow: 5px 5px 15px 5px #FFFFFF; 
+    box-shadow: 5px 5px 15px 5px #FFFFFF;
 }
 .drinkMenu{
     color: white;
@@ -151,6 +174,8 @@ nav.active .icon .line2{
     background-image: url(/images/5cocktails.jpg);
     padding: 15%;
     margin-bottom: 5%;
+    -webkit-box-shadow: 5px 5px 15px 5px #FFFFFF; 
+box-shadow: 5px 5px 15px 5px #FFFFFF;
 }
 .contactUs{
     color: white;
@@ -160,6 +185,8 @@ nav.active .icon .line2{
     background-image: url(/images/contactus.jpg);
     padding: 15%;
     margin-bottom: 5%;
+    -webkit-box-shadow: 5px 5px 15px 5px #FFFFFF; 
+box-shadow: 5px 5px 15px 5px #FFFFFF;
 }
 .socialMedia{
     color: white;
@@ -169,4 +196,6 @@ nav.active .icon .line2{
     background-image: url(/images/social.jpg);
     padding: 15%;
     margin-bottom: 5%;
+    -webkit-box-shadow: 5px 5px 15px 5px #FFFFFF; 
+box-shadow: 5px 5px 15px 5px #FFFFFF;
 }
