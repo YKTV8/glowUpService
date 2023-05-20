@@ -26,7 +26,7 @@ body{
 }
 #nav{
     background-color: rgba(54, 54, 54, 0.95);
-    padding: 5%;
+    padding: 1%;
     width: 100vw;
     display: flex;
     text-align: center;
@@ -96,7 +96,35 @@ nav.active .icon .line1{
 nav.active .icon .line2{
     transform: rotate(765deg) translateY(-5.5px);
 }
-
+/* overlay menu fullscreen style */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: none;
+    z-index: 9999; /* Ensure it appears on top of other elements */
+  }
+  #overlay ul li a{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    font-size: 5rem;
+    color: gold;
+    margin-top: 2%;
+  }
+  #overlay a:hover{
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(165, 91, 91, 0.8);
+    width: 97%;
+  }
+  
 /* styling for logo */
 .logo{
     display: flex;
