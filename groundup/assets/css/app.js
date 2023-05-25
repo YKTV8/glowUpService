@@ -8,7 +8,7 @@ toggle.addEventListener('click', () =>{
 // This function is to change Panel.active on mouse hover
 const panels = document.querySelectorAll('.panel');
 panels.forEach((panels)=>{
-    panels.addEventListener('mouseover', () =>{
+    panels.addEventListener('mouseenter', () =>{
         removeActiveClass()
         panels.classList.add('active')
     })
@@ -18,3 +18,16 @@ function removeActiveClass(){
         panels.classList.remove('active')
     })
 }
+// overlay menu on hamburger click
+const hamburgerButton = document.getElementById("toggle");
+const overlay = document.getElementById("overlay");
+
+hamburgerButton.addEventListener("click", function() {
+  overlay.style.display = "block"; // Show the overlay
+
+  if (overlay.style.display === "block") {
+    document.documentElement.style.height = "100%"; // Make the overlay fullscreen
+  } else {
+    document.documentElement.style.height = ""; // Revert to default height when overlay is hidden
+  }
+});
