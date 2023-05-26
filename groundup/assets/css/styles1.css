@@ -68,8 +68,10 @@ nav ul a{
     margin: 0 10px;
 }
 /* Food Menu Carousel */
-img{
-    background-size: contain;
+.img{
+    display: block;
+    background-image: center center ;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     width: 100vw;
@@ -81,11 +83,12 @@ img{
     width: 70vw;
     position: relative;
     overflow: hidden;
-    top: 15vh;
+    margin-top: 5%;
+    margin-bottom: 6%;
 }
 .carousel-item{
     opacity: 0;
-    height: 100vh;
+    height: 60vh;
     width: 100vw;
     background-position: center center;
     background-size: cover;
@@ -122,6 +125,7 @@ img{
 
 /* Footer style for all HTML pages created */
 .footer{
+    
     text-align: center;
     background-color: rgb(54, 54, 54);
     color: #FFFFFF;
