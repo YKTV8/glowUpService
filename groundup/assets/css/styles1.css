@@ -77,6 +77,12 @@ nav ul a{
     width: 100vw;
     height: 100vh;
 }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+  }
 .imageCarousel-container{
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0,0,0,0.23);
     height: 70vh;
@@ -100,6 +106,8 @@ nav ul a{
 }
 .carousel-item.active{
     opacity: 1;
+    height: 100%;
+    width: 100%;
 }
 .arrow{
     position: fixed;
