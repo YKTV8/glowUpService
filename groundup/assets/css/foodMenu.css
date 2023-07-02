@@ -1,5 +1,11 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
 body {
     min-height: 100vh;
+    width: 100vw;
+    margin: 0;
     background-image: url(/images/glowmenuBG.jpg);
     background-repeat: no-repeat;
     background-position-y: 60%;
@@ -56,11 +62,17 @@ h4{
   background-color: rgba(24, 255, 24, 0.55);
   font-size: 150%;
 }
+p{
+  text-align: center;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.95);
+  font-size: 24px;
+}
   .slider {
     height: 400px;
     /* changes made above */
     position: relative;
-    width: 100%;
+    width: 100vw;
   
     display: grid;
     place-items: center;
@@ -87,34 +99,39 @@ h4{
   /*  IMPORTANT CODE BELOW */
   .slide.bg-red-500{
     background-color: red;
-    background-image: url(/images/5cocktails.jpg);
+    background-image: url(/images/food.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: bottom;
   }
   .slide.bg-purple-500{
     background-color: purple;
     background-image: url(/images/food5.jpg);
     background-size: cover;
-    background-position: bottom;
+    /* background-position: bottom; */
     background-repeat: no-repeat;
+    background-position-y: 150%;
   }
   .slide.bg-blue-500{
     background-color: blue;
-    background-image: url(/images/cocktails.jpg);
+    background-image: url(/images/burritos.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: 110%;
   }
   .slide.bg-indigo-500{
     background-color: indigo;
-    background-image: url(/images/contactus.jpg);
+    background-image: url(/images/mintsalad.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: 150%;
   }
   .slide.bg-pink-500,.slide.bg-blue-800{
     background-color: pink;
-    background-image: url(/images/food.jpg);
+    background-image: url(/images/loadedfries.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: 150%;
 
   }
   .slide.bg-green-500{
@@ -122,18 +139,21 @@ h4{
     background-image: url(/images/food1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: 150%;
   }
   .slide.bg-yellow-500{
     background-color: yellow;
     background-image: url(/images/food2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: 150%;
   }
   .slide.bg-gray-500{
     background-color: gray;
     background-image: url(/images/food3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: 150%;
   }
 
   .slide-track {
@@ -152,7 +172,6 @@ h4{
     animation: scroll2 15s linear infinite;
     justify-content: space-between;
   }
-  
   .slide {
     width: 550px;
     height: 600px;
@@ -165,6 +184,12 @@ h4{
   }
   .slide:hover{
     transform:scale(1.4)
+  }
+  .slide:hover h4{
+    display: none;
+  }
+  .slide:hover p{
+    display: inline-block;
   }
   
   @keyframes scroll {
@@ -185,10 +210,32 @@ h4{
       transform: translateX(calc(-150px * 5));
     }
   }
-  
+  /* small device screen to ipad screen */
   @media screen and (max-width: 768px) {
+    body {
+      min-height: 100vh;
+      width: 100vw;
+      margin: 0;
+      background-image: url(/images/glowmenuBG.jpg);
+      background-repeat: no-repeat;
+      background-position-y: 60%;
+      background-size: cover;
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+    nav.active ul{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 100vw;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      margin: 15px 0;
+  }
     .slide-track {
-      width: calc(80px * 20);
+      width: calc(80px * 80);
+
     }
   
     .slide-track2 {
@@ -196,7 +243,7 @@ h4{
     }
   
     .slide {
-      width: 80px;
+      width: 100vw;
     }
   
     @keyframes scroll {
@@ -204,7 +251,65 @@ h4{
         transform: translateX(0px);
       }
       100% {
-        transform: translateX(calc(-80px * 10));
+        transform: translateX(calc(-80px * 30));
+      }
+    }
+  
+    @keyframes scroll2 {
+      0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(calc(-80px * 5));
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    body{
+      width: 100vw;
+      margin: 0;
+      padding: 0%;
+      overflow: hidden;
+      background-position-x: 70%;
+    }
+    nav.active ul{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 450px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      margin: 15px 0;
+  }
+  .slider::before,
+  .slider::after{
+    position:absolute;
+    background-image:linear-gradient(to right,rgba(255,255,255,1) 0%,rgba(255,255,255,0) 40%);
+    content:'';
+    height:100%;width:25%;
+    z-index:2;pointer-events:none;
+  }
+    .slide-track {
+      width: calc(80px * 80);
+      margin: 0;
+    }
+  
+    .slide-track2 {
+      width: calc(80px * 15);
+    }
+  
+    .slide {
+      width: 100vw;
+      margin: 0;
+    }
+  
+    @keyframes scroll {
+      0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(calc(-80px * 30));
       }
     }
   
